@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Faizan Bukhari — SDET, Test & Verification Engineer, AI Systems Engineer & Technical Product Owner. Berlin-based, 5+ years experience, 16 verified credentials from Mercedes-Benz AG.">
+<meta name="keywords" content="SDET, QA Automation, Test Verification Engineer, AI Engineer, Mercedes-Benz, Berlin, Python, Playwright, CANoe, ASPICE">
+<meta property="og:title" content="Faizan Bukhari — Engineering Portfolio">
+<meta property="og:description" content="SDET · T&V Engineer · AI Systems · Technical Product Owner — Berlin">
+<meta property="og:type" content="website">
+<title>Faizan Bukhari — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">FB<span class="logo-dot">.</span></a>
+  <div class="nav-links">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#credentials" class="nav-link">Credentials</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+  <div class="nav-status">
+    <span class="status-dot"></span>
+    <span class="status-text">Open to work</span>
+  </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#credentials" class="mobile-link">Credentials</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text">ENGINEER</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span>Berlin, Germany · Open to Relocation</span>
+    </div>
+    <h1 class="hero-name">
+      <span class="name-line" data-text="FAIZAN">FAIZAN</span>
+      <span class="name-line outline" data-text="BUKHARI">BUKHARI</span>
+    </h1>
+    <div class="hero-roles-wrap">
+      <div class="roles-slider">
+        <span class="role-item active">SDET &amp; QA Automation</span>
+        <span class="role-item">Test &amp; Verification Engineer</span>
+        <span class="role-item">Software Engineer / AI</span>
+        <span class="role-item">Technical Product Owner</span>
+        <span class="role-item">AI Automation Engineer</span>
+      </div>
+    </div>
+    <p class="hero-desc">5+ years bridging <em>automotive embedded systems</em>, <em>test automation</em>, and <em>agentic AI</em> — from Mercedes-Benz HiL test benches to LLM orchestration pipelines.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Years XP</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">16</span>
+        <span class="stat-label">Credentials</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Companies</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">60%</span>
+        <span class="stat-label">Regression Cut</span>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Get in touch</a>
+      <a href="#experience" class="btn-ghost">View work</a>
+      <a href="assets/resume.pdf" class="btn-ghost" download>Download CV</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span class="scroll-line"></span>
+    <span class="scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ROLE SELECTOR -->
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// 01 — PROFILE</span>
+      <h2 class="section-title">Four lenses.<br>One engineer.</h2>
+    </div>
+    <p class="section-intro reveal">My background crosses four distinct but connected domains. Click the one that matches what you're hiring for — the content below adapts to show you what's relevant.</p>
+
+    <div class="role-selector reveal">
+      <button class="role-btn active" data-role="sdet">
+        <span class="role-btn-icon">⚡</span>
+        <span class="role-btn-label">SDET / QA</span>
+      </button>
+      <button class="role-btn" data-role="tv">
+        <span class="role-btn-icon">🔬</span>
+        <span class="role-btn-label">T&amp;V Engineer</span>
+      </button>
+      <button class="role-btn" data-role="se">
+        <span class="role-btn-icon">🤖</span>
+        <span class="role-btn-label">Software / AI</span>
+      </button>
+      <button class="role-btn" data-role="pm">
+        <span class="role-btn-icon">📊</span>
+        <span class="role-btn-label">Technical PO</span>
+      </button>
+    </div>
+
+    <!-- SDET VIEW -->
+    <div class="role-view active reveal" id="view-sdet">
+      <div class="role-pitch-grid">
+        <div class="pitch-text">
+          <h3>Why hire me as your SDET?</h3>
+          <p>I've built test automation ecosystems from scratch across web, mobile, and embedded domains using Java, Python, TypeScript, and C#. At Mercedes-Benz (Mbition), I designed ISTQB-standardized suites covering hundreds of manual cases alongside CI/CD pipelines. At SYSTEMA, I eliminated 60% of manual regression effort using Cypress and BDD. I bring engineering discipline to quality — not just execution.</p>
+          <p>I'm currently evolving toward <strong>Agentic QA</strong> — using Claude MCP servers and LLM orchestration to build autonomous test environments that self-analyze vehicle network logs and self-heal broken scripts.</p>
+        </div>
+        <div class="pitch-metrics">
+          <div class="metric-card"><span class="metric-val">60%</span><span class="metric-label">Regression reduction (SYSTEMA)</span></div>
+          <div class="metric-card"><span class="metric-val">500+</span><span class="metric-label">Test cases managed (CDA)</span></div>
+          <div class="metric-card"><span class="metric-val">100%</span><span class="metric-label">Requirement coverage</span></div>
+          <div class="metric-card"><span class="metric-val">40%</span><span class="metric-label">Coverage increase via BDD</span></div>
+        </div>
+      </div>
+      <div class="pitch-tags">
+        <span class="tag featured">Playwright (TS)</span><span class="tag featured">Cypress</span><span class="tag featured">Selenium</span><span class="tag featured">Appium</span>
+        <span class="tag">PyTest</span><span class="tag">BDD/TDD</span><span class="tag">GitLab CI/CD</span><span class="tag">Jenkins</span>
+        <span class="tag">Docker</span><span class="tag">JMeter</span><span class="tag">REST Assured</span><span class="tag">Postman</span>
+        <span class="tag">ISTQB</span><span class="tag">TestRail</span><span class="tag">BrowserStack</span><span class="tag">Robot Framework</span>
+      </div>
+      <div class="cover-letter-link">
+        <a href="assets/covers/sdet_cover.pdf" target="_blank" class="doc-link">📄 View SDET Cover Letter</a>
+      </div>
+    </div>
+
+    <!-- T&V VIEW -->
+    <div class="role-view reveal" id="view-tv">
+      <div class="role-pitch-grid">
+        <div class="pitch-text">
+          <h3>Why hire me as your T&V Engineer?</h3>
+          <p>2 years at Mbition GmbH (Mercedes-Benz) doing real automotive validation work. My reference letter from MBition's Head of HR explicitly confirms: HiL test bench engineering, ECU communication validation over CAN and Automotive Ethernet in AUTOSAR context, Vector CANoe configuration management, Python automation scripts, CAPL scripting, QNX/Rich OS bring-up and flashing (QFIL), Lauterbach (Trace32) debugging, and ISO 26262 / ASPICE audit-readiness contributions.</p>
+          <p>This isn't resume padding — it's verified by a signed reference from the Head of HR at a Mercedes-Benz subsidiary.</p>
+        </div>
+        <div class="pitch-metrics">
+          <div class="metric-card"><span class="metric-val">2yr</span><span class="metric-label">Automotive validation at MB</span></div>
+          <div class="metric-card"><span class="metric-val">ASPICE</span><span class="metric-label">L1 & L2 certified</span></div>
+          <div class="metric-card"><span class="metric-val">3</span><span class="metric-label">Bus protocols mastered</span></div>
+          <div class="metric-card"><span class="metric-val">Signed</span><span class="metric-label">Reference letter (MBition HR)</span></div>
+        </div>
+      </div>
+      <div class="pitch-tags">
+        <span class="tag featured">Vector CANoe</span><span class="tag featured">CAPL</span><span class="tag featured">Lauterbach (Trace32)</span><span class="tag featured">DTS Monaco</span>
+        <span class="tag">QNX / Rich OS</span><span class="tag">QFIL Flashing</span><span class="tag">HiL Test Bench</span><span class="tag">DLT Viewer</span>
+        <span class="tag">CAN-FD</span><span class="tag">LIN</span><span class="tag">Automotive Ethernet</span><span class="tag">DoIP / UDS</span>
+        <span class="tag">ISO 26262</span><span class="tag">ASPICE L1/L2</span><span class="tag">FMEA</span><span class="tag">IBM DOORS</span>
+      </div>
+      <div class="cover-letter-link">
+        <a href="assets/covers/tv_cover.pdf" target="_blank" class="doc-link">📄 View T&V Cover Letter</a>
+      </div>
+    </div>
+
+    <!-- SE/AI VIEW -->
+    <div class="role-view reveal" id="view-se">
+      <div class="role-pitch-grid">
+        <div class="pitch-text">
+          <h3>Why hire me as your Software / AI Engineer?</h3>
+          <p>BSc in Software Engineering + building production Python, Java, C#, and TypeScript systems across 5 years. Beyond standard automation, I'm actively building with CrewAI, AutoGen, LangChain, and Anthropic MCP servers to design agentic pipelines. Mercedes-Benz certified me in AI@MO (ML + GenAI full course, Sep 2025), Experience GenAI (Sep 2025), and Data@Cloud 2.0 — plus I hold BSBI's "AI for Business: Driving Innovation" professional certificate.</p>
+          <p>I'm specifically focused on <strong>Agentic QA</strong>: configuring Claude MCP servers to autonomously interact with local testing environments, analyze CAN/LIN/Ethernet logs, and orchestrate multi-agent test workflows with Human-in-the-Loop governance.</p>
+        </div>
+        <div class="pitch-metrics">
+          <div class="metric-card"><span class="metric-val">5+</span><span class="metric-label">Languages in prod use</span></div>
+          <div class="metric-card"><span class="metric-val">4</span><span class="metric-label">AI/ML certifications</span></div>
+          <div class="metric-card"><span class="metric-val">BSc</span><span class="metric-label">Software Engineering</span></div>
+          <div class="metric-card"><span class="metric-val">MCP</span><span class="metric-label">Anthropic API configured</span></div>
+        </div>
+      </div>
+      <div class="pitch-tags">
+        <span class="tag featured">Python</span><span class="tag featured">CrewAI / LangGraph</span><span class="tag featured">LangChain</span><span class="tag featured">AutoGen</span>
+        <span class="tag">Anthropic MCP</span><span class="tag">OpenAI API</span><span class="tag">Java / Spring Boot</span><span class="tag">TypeScript</span>
+        <span class="tag">Hugging Face</span><span class="tag">RAG Systems</span><span class="tag">Vector DBs</span><span class="tag">Docker</span>
+        <span class="tag">CI/CD (GitLab/Jenkins)</span><span class="tag">Cloud Validation (RCT)</span><span class="tag">CAPL</span><span class="tag">C#</span>
+      </div>
+      <div class="cover-letter-link">
+        <a href="assets/covers/se_cover.pdf" target="_blank" class="doc-link">📄 View Software Engineer Cover Letter</a>
+        <a href="assets/covers/ai_cover.pdf" target="_blank" class="doc-link">📄 View AI Engineer Cover Letter</a>
+      </div>
+    </div>
+
+    <!-- TPO VIEW -->
+    <div class="role-view reveal" id="view-pm">
+      <div class="role-pitch-grid">
+        <div class="pitch-text">
+          <h3>Why hire me as your Technical Product Owner?</h3>
+          <p>MSc Engineering Management at BSBI Berlin (Project Management specialization, Risk Assessment & Strategic Planning — finishes November 2026). At Mercedes-Benz, I translated complex automotive requirements into Jira user stories, maintained full requirement traceability via IBM DOORS, facilitated cross-functional stakeholder meetings, and generated project performance reports for leadership decision-making. Certified Product Owner + Scrum Master (26hrs training, MB AG, Nov 2025). ASPICE L1/L2 certified.</p>
+          <p>My edge: I understand <em>both</em> the engineering and the product deeply. I'm also building Agentic AI workflows where multi-agent systems autonomously handle milestone tracking and risk assessment — I don't just manage products, I automate the management layer.</p>
+        </div>
+        <div class="pitch-metrics">
+          <div class="metric-card"><span class="metric-val">MSc</span><span class="metric-label">Eng. Management (Nov 2026)</span></div>
+          <div class="metric-card"><span class="metric-val">26h</span><span class="metric-label">Product Owner training (MB AG)</span></div>
+          <div class="metric-card"><span class="metric-val">15h</span><span class="metric-label">Scrum Master training (MB AG)</span></div>
+          <div class="metric-card"><span class="metric-val">ASPICE</span><span class="metric-label">Process certified L1 & L2</span></div>
+        </div>
+      </div>
+      <div class="pitch-tags">
+        <span class="tag featured">Agile / Scrum</span><span class="tag featured">Jira (Expert)</span><span class="tag featured">Stakeholder Mgmt</span><span class="tag featured">FMEA</span>
+        <span class="tag">IBM DOORS</span><span class="tag">Confluence</span><span class="tag">MS Project</span><span class="tag">PowerBI</span>
+        <span class="tag">SAP</span><span class="tag">ASPICE L1/L2</span><span class="tag">Risk Management</span><span class="tag">Strategic Planning</span>
+        <span class="tag">V-Model / SDLC</span><span class="tag">Capital Market Basics</span><span class="tag">CrewAI (Agentic PM)</span><span class="tag">Product Safety & Liability</span>
+      </div>
+      <div class="cover-letter-link">
+        <a href="assets/covers/pm_cover.pdf" target="_blank" class="doc-link">📄 View TPO Cover Letter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// 02 — EXPERIENCE</span>
+      <h2 class="section-title">Where I've worked.</h2>
+    </div>
+
+    <div class="timeline">
+      <!-- MB -->
+      <div class="tl-item reveal">
+        <div class="tl-connector">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <div>
+              <span class="company-name">Mbition GmbH</span>
+              <span class="company-sub">— Mercedes-Benz subsidiary</span>
+              <div class="tl-role-badge">Test &amp; Verification Engineer · Working Student</div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-date">03/2024 — 02/2026</span>
+              <span class="tl-location">Berlin, Germany</span>
+              <a href="assets/reference_mbition.pdf" target="_blank" class="ref-badge">📋 Reference Letter</a>
+            </div>
+          </div>
+          <div class="tl-body">
+            <p class="tl-context">Strategic Development Office — infotainment / ADAS-adjacent integration, next-gen SDV platforms.</p>
+            <ul class="tl-bullets">
+              <li>Built and commissioned HiL test benches for infotainment/ADAS scopes; stabilized environments for repeatable test execution</li>
+              <li>Validated ECU communication over CAN and Automotive Ethernet in AUTOSAR context; structured technical findings for RCA</li>
+              <li>Set up and maintained Vector CANoe configurations (measurement/simulation setups, databases, settings) across multiple vehicle variants</li>
+              <li>Developed Python automation scripts to standardize regression, automate recurring workflows, and capture structured results/logs</li>
+              <li>Created and maintained CAPL scripts in CANoe to automate test sequences, triggers, and bus-based validations</li>
+              <li>Performed QNX/Rich OS bring-up and flashing activities via QFIL; ensured correct baselines for downstream testing</li>
+              <li>Supported Lauterbach (Trace32) low-level debugging; evaluated QNX logs, vCPU logs, PuTTY sessions, and DLT Viewer traces</li>
+              <li>Contributed Scrum/Kanban delivery; prepared Jira backlog, maintained Confluence docs, supported ISO 26262 and ASPICE audit readiness</li>
+            </ul>
+            <div class="tl-tags-wrap">
+              <span class="tl-tag">CANoe</span><span class="tl-tag">CAPL</span><span class="tl-tag">Python</span><span class="tl-tag">QNX</span><span class="tl-tag">Lauterbach</span>
+              <span class="tl-tag">HiL</span><span class="tl-tag">DLT Viewer</span><span class="tl-tag">ISO 26262</span><span class="tl-tag">ASPICE</span><span class="tl-tag">Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SYSTEMA -->
+      <div class="tl-item reveal">
+        <div class="tl-connector">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <div>
+              <span class="company-name">SYSTEMA Art of Automation GmbH</span>
+              <div class="tl-role-badge">Test Automation Engineer · Working Student</div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-date">08/2022 — 12/2023</span>
+              <span class="tl-location">Dresden, Germany</span>
+              <a href="assets/experience_systema.pdf" target="_blank" class="ref-badge">📋 Experience Letter</a>
+            </div>
+          </div>
+          <div class="tl-body">
+            <p class="tl-context">Industrial automation, MES solutions, smart factory software for global manufacturing clients.</p>
+            <ul class="tl-bullets">
+              <li>Migrated legacy RationalRobot tests to SpecFlow BDD framework (C# Feature Files); refactored C# project structure</li>
+              <li>Created automated test suites for modified BCC (Basic Cell Controller) functionality in SpecFlow + MSSQL master data generation</li>
+              <li>Increased regression coverage by 40% for industrial automation and MES projects through systematic BDD adoption</li>
+              <li>Reduced manual QA time by 60% by automating repetitive regression checks across web portals and factory management software</li>
+              <li>Integrated automated suites into GitLab CI/CD; performed API validation via Postman and JMeter under high-load scenarios</li>
+              <li>Completed SpecFlow BDD framework training + internal BCC Testteam certification; German A1 language course</li>
+            </ul>
+            <div class="tl-tags-wrap">
+              <span class="tl-tag">SpecFlow</span><span class="tl-tag">C#</span><span class="tl-tag">Python</span><span class="tl-tag">MSSQL</span><span class="tl-tag">BDD</span>
+              <span class="tl-tag">Cypress</span><span class="tl-tag">JMeter</span><span class="tl-tag">GitLab CI</span><span class="tl-tag">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CDA -->
+      <div class="tl-item reveal">
+        <div class="tl-connector">
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <div>
+              <span class="company-name">Capital Development Authority</span>
+              <div class="tl-role-badge">Junior SQA Engineer</div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-date">07/2020 — 06/2021</span>
+              <span class="tl-location">Islamabad, Pakistan</span>
+            </div>
+          </div>
+          <div class="tl-body">
+            <p class="tl-context">Government authority — automated testing for public-facing web and mobile applications.</p>
+            <ul class="tl-bullets">
+              <li>Automated mobile and web application testing using Selenium (Java) and Appium across iOS and Android platforms</li>
+              <li>Organized 500+ test cases in TestRail achieving 100% functional requirement coverage</li>
+              <li>Improved overall test efficiency by 30% through optimized Jira defect tracking and requirement traceability</li>
+              <li>Executed functional and regression testing; collaborated cross-functionally to resolve critical defects during early SDLC stages</li>
+            </ul>
+            <div class="tl-tags-wrap">
+              <span class="tl-tag">Selenium</span><span class="tl-tag">Appium</span><span class="tl-tag">Java</span><span class="tl-tag">TestRail</span><span class="tl-tag">Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// 03 — SKILLS</span>
+      <h2 class="section-title">Technical arsenal.</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-group">
+        <div class="skill-group-label">Web &amp; Mobile Testing</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Playwright (TS)</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="skill-bar-item"><span>Cypress (JS/Java)</span><div class="bar"><div class="bar-fill" style="width:88%"></div></div></div>
+          <div class="skill-bar-item"><span>Selenium (Java/Python)</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+          <div class="skill-bar-item"><span>Appium (iOS/Android)</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Automotive &amp; Hardware</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Vector CANoe + CAPL</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+          <div class="skill-bar-item"><span>Lauterbach (Trace32)</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="skill-bar-item"><span>DTS Monaco / DLT</span><div class="bar"><div class="bar-fill" style="width:78%"></div></div></div>
+          <div class="skill-bar-item"><span>HiL / ECU Validation</span><div class="bar"><div class="bar-fill" style="width:82%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">AI &amp; Agentic Systems</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>LangChain / LangGraph</span><div class="bar"><div class="bar-fill" style="width:78%"></div></div></div>
+          <div class="skill-bar-item"><span>CrewAI / AutoGen</span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
+          <div class="skill-bar-item"><span>Anthropic MCP API</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="skill-bar-item"><span>Prompt Engineering</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Python</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="skill-bar-item"><span>Java / Spring Boot</span><div class="bar"><div class="bar-fill" style="width:82%"></div></div></div>
+          <div class="skill-bar-item"><span>TypeScript / JavaScript</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="skill-bar-item"><span>C# / CAPL / C++</span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">DevOps &amp; Infra</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>GitLab CI/CD</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+          <div class="skill-bar-item"><span>Docker</span><div class="bar"><div class="bar-fill" style="width:78%"></div></div></div>
+          <div class="skill-bar-item"><span>Jenkins</span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
+          <div class="skill-bar-item"><span>Kubernetes (basics)</span><div class="bar"><div class="bar-fill" style="width:60%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Standards &amp; Process</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>ISTQB</span><div class="bar"><div class="bar-fill" style="width:88%"></div></div></div>
+          <div class="skill-bar-item"><span>ASPICE L1/L2</span><div class="bar"><div class="bar-fill" style="width:82%"></div></div></div>
+          <div class="skill-bar-item"><span>ISO 26262 / FMEA</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="skill-bar-item"><span>Agile / Scrum / PO</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="spoken-langs reveal">
+      <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">C1 Advanced</span><div class="lang-bar"><div style="width:90%"></div></div></div>
+      <div class="lang-item"><span class="lang-name">German</span><span class="lang-level">A2 → B1/B2 in progress</span><div class="lang-bar"><div style="width:28%"></div></div></div>
+      <div class="lang-item"><span class="lang-name">Urdu / Punjabi</span><span class="lang-level">Native</span><div class="lang-bar"><div style="width:100%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// 04 — CREDENTIALS</span>
+      <h2 class="section-title">16 verified credentials.</h2>
+      <p class="section-sub reveal">All certifications from Mercedes-Benz AG or accredited academic institutions — real PDFs, real dates. Filter by category.</p>
+    </div>
+
+    <div class="cred-filters reveal">
+      <button class="cred-filter active" data-filter="all">All (16)</button>
+      <button class="cred-filter" data-filter="ai">AI &amp; GenAI (4)</button>
+      <button class="cred-filter" data-filter="cloud">Cloud &amp; Security (3)</button>
+      <button class="cred-filter" data-filter="agile">Agile &amp; Leadership (3)</button>
+      <button class="cred-filter" data-filter="auto">Automotive (3)</button>
+      <button class="cred-filter" data-filter="compliance">Compliance (3)</button>
+    </div>
+
+    <div class="creds-grid reveal" id="credsGrid">
+      <!-- AI -->
+      <div class="cred-card" data-cat="ai">
+        <div class="cred-badge ai">AI</div>
+        <div class="cred-info">
+          <div class="cred-name">AI@MO — Full Version (ML &amp; GenAI)</div>
+          <div class="cred-issuer">Mercedes-Benz AG</div>
+          <div class="cred-date">Sep 11, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="ai">
+        <div class="cred-badge ai">AI</div>
+        <div class="cred-info">
+          <div class="cred-name">Experience GenAI [eLearning]</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Sep 10, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="ai">
+        <div class="cred-badge ai">AI</div>
+        <div class="cred-info">
+          <div class="cred-name">We Drive Data, AI &amp; Cyber Security — EU</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Aug 19, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="ai">
+        <div class="cred-badge bsbi">BSBI</div>
+        <div class="cred-info">
+          <div class="cred-name">AI for Business: Driving Innovation</div>
+          <div class="cred-issuer">Berlin School of Business &amp; Innovation</div>
+          <div class="cred-date">2025</div>
+        </div>
+      </div>
+
+      <!-- CLOUD -->
+      <div class="cred-card" data-cat="cloud">
+        <div class="cred-badge cloud">☁</div>
+        <div class="cred-info">
+          <div class="cred-name">Cloud Security Responsible (CSR) — Exam Passed</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Oct 22, 2025 · Valid 12 months</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="cloud">
+        <div class="cred-badge cloud">☁</div>
+        <div class="cred-info">
+          <div class="cred-name">Remote Cloud Testing (RCT)</div>
+          <div class="cred-issuer">Mercedes-Benz AG</div>
+          <div class="cred-date">Feb 4–17, 2026</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="cloud">
+        <div class="cred-badge cloud">☁</div>
+        <div class="cred-info">
+          <div class="cred-name">Data@Cloud 2.0 [eLearning]</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Nov 11, 2025</div>
+        </div>
+      </div>
+
+      <!-- AGILE -->
+      <div class="cred-card" data-cat="agile">
+        <div class="cred-badge agile">PO</div>
+        <div class="cred-info">
+          <div class="cred-name">Product Owner Training — Operational Excellence by L2X</div>
+          <div class="cred-issuer">Mercedes-Benz AG · 26 hours</div>
+          <div class="cred-date">Nov 3–6, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="agile">
+        <div class="cred-badge agile">SM</div>
+        <div class="cred-info">
+          <div class="cred-name">Scrum Master Training</div>
+          <div class="cred-issuer">Mercedes-Benz AG · 15 hours</div>
+          <div class="cred-date">Feb 10–11, 2026</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="agile">
+        <div class="cred-badge agile">MGT</div>
+        <div class="cred-info">
+          <div class="cred-name">Management Module — Integrity@Work</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Oct 15, 2025</div>
+        </div>
+      </div>
+
+      <!-- AUTOMOTIVE -->
+      <div class="cred-card" data-cat="auto">
+        <div class="cred-badge auto">🏎</div>
+        <div class="cred-info">
+          <div class="cred-name">Automotive SPICE® Essentials (Level 1 &amp; 2)</div>
+          <div class="cred-issuer">Mercedes-Benz AG</div>
+          <div class="cred-date">Oct 15, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="auto">
+        <div class="cred-badge auto">⚡</div>
+        <div class="cred-info">
+          <div class="cred-name">Annual HV Drive Systems Safety Training</div>
+          <div class="cred-issuer">Mercedes-Benz AG (Cars/VAN &amp; Components)</div>
+          <div class="cred-date">Apr 9, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="auto">
+        <div class="cred-badge auto">KEM</div>
+        <div class="cred-info">
+          <div class="cred-name">KEM/PEM Training — Documentation &amp; Vehicle Plant Impact</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Sep 11, 2025</div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE -->
+      <div class="cred-card" data-cat="compliance">
+        <div class="cred-badge comp">⚠</div>
+        <div class="cred-info">
+          <div class="cred-name">FMEA Learning Journey — Internal/External Requirements</div>
+          <div class="cred-issuer">Mercedes-Benz AG</div>
+          <div class="cred-date">Aug 27, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="compliance">
+        <div class="cred-badge comp">⚖</div>
+        <div class="cred-info">
+          <div class="cred-name">Expert Module — Product Safety &amp; Liability</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG · Integrity &amp; Compliance</div>
+          <div class="cred-date">Aug 19, 2025</div>
+        </div>
+      </div>
+      <div class="cred-card" data-cat="compliance">
+        <div class="cred-badge comp">📊</div>
+        <div class="cred-info">
+          <div class="cred-name">Understanding the Capital Market</div>
+          <div class="cred-issuer">Mercedes-Benz Group AG</div>
+          <div class="cred-date">Nov 11, 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="edu-section reveal">
+      <h3 class="subsection-title">Education</h3>
+      <div class="edu-cards">
+        <div class="edu-card current-edu">
+          <div class="edu-status">IN PROGRESS</div>
+          <div class="edu-degree">MSc Engineering Management</div>
+          <div class="edu-school">Berlin School of Business &amp; Innovation / UNINETTUNO</div>
+          <div class="edu-detail">Specialization: Project Management · Risk Assessment · Strategic Planning</div>
+          <div class="edu-period">May 2025 — November 13, 2026 · Berlin, Germany</div>
+          <div class="edu-note">Matriculation No: Q1116925 · Enrolled since May 22, 2025</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-degree">BSc Software Engineering (Major)</div>
+          <div class="edu-school">Capital University of Science and Technology</div>
+          <div class="edu-detail">134 Credits · CGPA 2.20 · Degree No. BS20-1413 · HEC Attested</div>
+          <div class="edu-period">2016 — September 8, 2020 · Islamabad, Pakistan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY & CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// 05 — CONTACT</span>
+      <h2 class="section-title">Let's build something.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="availability-block reveal">
+        <h3>Availability</h3>
+        <div class="avail-items">
+          <div class="avail-item">
+            <div class="avail-dot pulse-green"></div>
+            <div>
+              <div class="avail-title">Part-time / Working Student</div>
+              <div class="avail-sub">Available now · 16–20h/week · Until Nov 2026</div>
+            </div>
+          </div>
+          <div class="avail-item">
+            <div class="avail-dot pulse-yellow"></div>
+            <div>
+              <div class="avail-title">Full-time</div>
+              <div class="avail-sub">Available from Q4 2026 (after MSc)</div>
+            </div>
+          </div>
+          <div class="avail-item">
+            <div class="avail-dot pulse-green"></div>
+            <div>
+              <div class="avail-title">Internship</div>
+              <div class="avail-sub">Open now · Flexible scheduling</div>
+            </div>
+          </div>
+          <div class="avail-item">
+            <div class="avail-dot pulse-blue"></div>
+            <div>
+              <div class="avail-title">Location</div>
+              <div class="avail-sub">Berlin · Open to relocation · Remote OK</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-links-wrap">
+          <a href="mailto:faizan.bukhari22@gmail.com" class="contact-btn primary">Email Me</a>
+          <a href="https://linkedin.com/in/faizanbukhari" target="_blank" class="contact-btn secondary">LinkedIn</a>
+          <a href="tel:+4915758264920" class="contact-btn secondary">+49 1575 826 4920</a>
+        </div>
+      </div>
+      <div class="docs-block reveal">
+        <h3>Documents</h3>
+        <div class="docs-list">
+          <a href="assets/reference_mbition.pdf" target="_blank" class="doc-item">
+            <span class="doc-icon">📋</span>
+            <div>
+              <div class="doc-name">Reference Letter — MBition GmbH</div>
+              <div class="doc-sub">Signed by Head of HR · Feb 28, 2026</div>
+            </div>
+          </a>
+          <a href="assets/experience_systema.pdf" target="_blank" class="doc-item">
+            <span class="doc-icon">📋</span>
+            <div>
+              <div class="doc-name">Experience Letter — SYSTEMA GmbH</div>
+              <div class="doc-sub">Signed by Team Lead · Dec 15, 2023</div>
+            </div>
+          </a>
+          <a href="assets/degree.pdf" target="_blank" class="doc-item">
+            <span class="doc-icon">🎓</span>
+            <div>
+              <div class="doc-name">BSc Degree — CUST Islamabad</div>
+              <div class="doc-sub">HEC Attested · Software Engineering</div>
+            </div>
+          </a>
+          <a href="assets/bsbi_enrollment.pdf" target="_blank" class="doc-item">
+            <span class="doc-icon">🎓</span>
+            <div>
+              <div class="doc-name">MSc Enrollment — BSBI Berlin</div>
+              <div class="doc-sub">Valid until May 12, 2026 · Matric: Q1116925</div>
+            </div>
+          </a>
+          <a href="assets/resume.pdf" target="_blank" class="doc-item">
+            <span class="doc-icon">📄</span>
+            <div>
+              <div class="doc-name">CV / Resume</div>
+              <div class="doc-sub">Multi-role version · April 2026</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <span class="footer-name">Faizan Bukhari</span>
+      <span class="footer-copy">faizan.bukhari22@gmail.com · Berlin · 2026</span>
+      <span class="footer-built">Built with HTML/CSS/JS · <span style="color:var(--accent)">No frameworks needed</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
